@@ -1,5 +1,8 @@
 package hu.unideb.inf.SpringJavaFX.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +14,10 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Entity
 public class Person {
+    @Id
+    @GeneratedValue
     private long id;
     private String name;
     private LocalDate dateOfBirth;

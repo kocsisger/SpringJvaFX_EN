@@ -16,8 +16,15 @@ public class SpringJavaFxApplication {
 		p.setName("Thomas");
 		p.setDateOfBirth(LocalDate.of(1999,12,12));
 		Person p2 = new Person(1, "Robert", LocalDate.of(1999,1,11));
+		Person p3 = Person.builder()
+						.id(10)
+						.name("Anna")
+						.dateOfBirth(LocalDate.of(1997,10,10))
+				    .build();
+
 		System.out.println(p);
 		System.out.println(p2);
+		System.out.println(p3);
 	}
 
 }

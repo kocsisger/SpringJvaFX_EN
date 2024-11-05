@@ -21,21 +21,13 @@ public class SpringJavaFxApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Person p = new Person();
-		p.setName("Thomas");
-		p.setDateOfBirth(LocalDate.of(1999,12,12));
-		Person p2 = new Person(1, "Robert", LocalDate.of(1999,1,11));
 		Person p3 = Person.builder()
 				.name("Anna")
 				.dateOfBirth(LocalDate.of(1997,10,10))
 				.build();
 
-		System.out.println(p);
-		System.out.println(p2);
 		System.out.println(p3);
-
 		personRepository.save(p3);
-
 		System.out.println("db -> " + personRepository.findByName("Anna"));
 	}
 }

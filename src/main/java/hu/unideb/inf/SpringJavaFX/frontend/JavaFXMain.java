@@ -11,7 +11,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 public class JavaFXMain extends Application {
-    Manager manager = new SpringManager();
+    static Manager manager = new SpringManager();
 
     @Override
     public void start(Stage stage) throws Exception {
